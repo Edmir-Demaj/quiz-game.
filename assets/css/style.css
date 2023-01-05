@@ -42,13 +42,13 @@ button {
     padding: 10px 30px;
     border-radius: 20px;
     border: 1.2px solid #FCFCFC;
-    margin-bottom: 70px;
+    margin-bottom: 40px;
 }
 
 #info {
     font-size: 0.9rem;
     width: 220px;
-    background-color: #4a277d;
+    background-color: #46237A;
 }
 
 #info:hover {
@@ -72,4 +72,25 @@ main {
 footer p {
     text-align: center;
     color: #0356db;
+}
+
+/* game rules style */
+
+ol {
+    background-color: #46237A;
+    color: #FCFCFC;
+    padding: 20px 30px;
+    border-spacing: 2px solid green;
+    margin-bottom: 30px;
+    max-width: 500px;
+    font-size: 0.9rem;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 5px rgba(135, 131, 143, 0.736);
+    display: none;
+}
+
+#enjoy {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #209663;
 }
