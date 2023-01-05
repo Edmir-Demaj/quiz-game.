@@ -1,0 +1,75 @@
+/* importing google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Henny+Penny&family=Jomolhari&display=swap');
+
+/* global style */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border-style: none;
+}
+
+/* body & heading 1 style */
+body {
+    background-color: #FCFCFC;
+    font-family: 'Jomolhari', serif;
+    font-weight: bold;
+    font-size: 1rem;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+h1 {
+    font-family: 'Henny Penny', cursive;
+    color: #0356db;
+    font-size: 2.8rem;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-bottom: 50px;
+}
+
+/* start button and info box style */
+button {
+    background-color: #0763f4;
+    color: #FCFCFC;
+    font-size: 1.3rem;
+    font-weight: bold;
+    width: 180px;
+    padding: 10px 30px;
+    border-radius: 20px;
+    border: 1.2px solid #FCFCFC;
+    margin-bottom: 70px;
+}
+
+#info {
+    font-size: 0.9rem;
+    width: 220px;
+    background-color: #4a277d;
+}
+
+#info:hover {
+    background-color: #0356db;
+}
+
+button:focus,
+button:hover {
+    background-color: #46237A;
+    color: #FCFCFC;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* footer style */
+footer p {
+    text-align: center;
+    color: #0356db;
+}
