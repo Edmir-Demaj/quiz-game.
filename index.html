@@ -17,12 +17,12 @@
 
     <!-- header of game with welcome message -->
     <header>
-        <h1 id="1">Welcome To Quiz Game !</h1>
+        <h1>Welcome To Quiz Game !</h1>
     </header>
 
     <!-- main content where game is showed & played -->
     <main>
-        <button>Start Game</button>
+        <button id="start">Start Game</button>
         <button id="info">How to play the game?</button>
 
         <!-- game rules -->
@@ -40,6 +40,16 @@
                 <br>
                 <p id="closeInfo">Understand !</p>
             </ol>
+        </section>
+
+        <!-- username details form -->
+        <section>
+            <form action="#" method="post" id="user">
+                <label for="userDetails">Please enter your Name:</label>
+                <input type="text" id="userDetails" name="userDetails" autofocus autocomplete="on" required>
+                <br>
+                <input type="submit">
+            </form>
         </section>
 
     </main>
