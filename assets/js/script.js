@@ -2,7 +2,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     // hidde info box on DOM Load
     document.getElementById("rules").style.display = "none";
-
     let info = document.getElementById("info");
     info.addEventListener("click", showInfoBox);
 
@@ -11,9 +10,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // hide user details form
     document.getElementById("user").style.display = "none";
-
     let user = document.getElementById("start");
     user.addEventListener("click", getName);
+
+    // hide game box
+    document.getElementById("questionsBox").style.display = "none";
+    let openGame = document.getElementById("user");
+    openGame.addEventListener("submit", startGame);
+
 
 
 
@@ -34,4 +38,14 @@ function closeInfoBox() {
 function getName() {
     document.getElementById("user").style.display = "block";
     document.getElementById("rules").style.display = "none";
+}
+
+/** this function shows game box */
+function startGame(event) {
+
+    event.preventDefault();
+
+    document.getElementById("name").textContent = document.getElementById("userDetails").value;
+
+    document.getElementById("questionsBox").style.display = "block";
 }
