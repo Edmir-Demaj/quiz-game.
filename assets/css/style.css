@@ -189,6 +189,29 @@ hr {
     padding-left: 10px;
 }
 
+#subAnswer,
+#next {
+    width: 120px;
+    font-size: 1.1rem;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+#subAnswer:hover,
+#next:hover {
+    background-color: #e2e2c5;
+    color: #060606;
+}
+
+
+
+.actions {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
 /* this class is created from js */
 .option {
     background-color: #e2e2c5;
@@ -198,4 +221,19 @@ hr {
     max-width: 500px;
     text-align: center;
     border-radius: 5px;
+    cursor: pointer;
+}
+
+.correct {
+    background-color: #209663;
+    color: #FCFCFC;
+}
+
+.incorrect {
+    background-color: rgb(232, 21, 21);
+    color: #FCFCFC;
+}
+
+.disabled {
+    pointer-events: none;
 }

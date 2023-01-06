@@ -19,8 +19,6 @@ document.addEventListener("DOMContentLoaded", function () {
     openGame.addEventListener("submit", startGame);
 
 
-
-
 });
 
 
@@ -49,15 +47,12 @@ function startGame(event) {
     // shows questions box
     document.getElementById("questionsBox").style.display = "block";
 
-    // call function showQuestions to show question number 1
+    // call function showQuestions to show question number
     showQuestions(0);
 
 }
 
-
-
-
-/** this function get questions and functions from the array questions */
+/** this function get questions and answers from the array questions */
 function showQuestions(index) {
     const questionText = document.getElementById("questionText");
     const optionsText = document.getElementById("options");
@@ -66,10 +61,44 @@ function showQuestions(index) {
     let newQuestions = questions[index].numb + "." + " " + questions[index].question;
     let newOptions = '<div class="option">' + questions[index].alternatives[0] + '</div>' + '<div class="option">' + questions[index].alternatives[1] + '</div>' + '<div class="option">' + questions[index].alternatives[2] + '</div>' + '<div class="option">' + questions[index].alternatives[3] + '</div>';
 
-
-
     questionText.innerHTML = newQuestions;
     optionsText.innerHTML = newOptions;
+
+    // makes options clickable
+    let selection = document.querySelectorAll(".option");
+    for (i = 0; i < selection.length; i++) {
+        selection[i].setAttribute("onclick", "selectionSeleceted(this)");
+    }
+
+}
+
+
+/** this function will get,check an update the answer onclick */
+let queNumb = 0;
+
+function selectionSeleceted(answer) {
+
+    let allOptions = document.querySelector(".optionList").children;
+    console.log(allOptions);
+
+    let userAnswer = answer.textContent;
+    let correctAnswer = questions[queNumb].answer;
+
+
+    if (userAnswer === correctAnswer) {
+        answer.classList.add("correct");
+
+    } else {
+        answer.classList.add("incorrect");
+    };
+
+    for (i = 0; i < allOptions.length; i++) {
+        allOptions[i].classList.add("disabled");
+
+
+    }
+
+
 }
 
 // an array that will contain all questions and answers of game.
