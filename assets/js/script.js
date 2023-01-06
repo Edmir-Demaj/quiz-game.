@@ -1,6 +1,7 @@
-// Wait for the DOM finishing load before starting the game.
+// wait for the DOM to finish loading before starting the game.
 document.addEventListener("DOMContentLoaded", function () {
-    // hidde info box on DOM Load
+
+    // hidde game rules box on DOM load.
     document.getElementById("rules").style.display = "none";
     let info = document.getElementById("info");
     info.addEventListener("click", showInfoBox);
@@ -13,21 +14,20 @@ document.addEventListener("DOMContentLoaded", function () {
     let user = document.getElementById("start");
     user.addEventListener("click", getName);
 
-    // hide game box
+    // hide game box on DOM load.
     document.getElementById("questionsBox").style.display = "none";
     let openGame = document.getElementById("user");
     openGame.addEventListener("submit", startGame);
 
-
 });
 
 
-/** showes the info & rules box after click "How to play game?" */
+/** showes the game rules box after click "How to play game?" */
 function showInfoBox() {
     document.getElementById("rules").style.display = "block";
 }
 
-/** hides the info & rules box after click "Understand!*/
+/** hides the game rules box after click "Understand!"*/
 function closeInfoBox() {
     document.getElementById("rules").style.display = "none";
 }
@@ -61,10 +61,11 @@ function showQuestions(index) {
     let newQuestions = questions[index].numb + "." + " " + questions[index].question;
     let newOptions = '<div class="option">' + questions[index].alternatives[0] + '</div>' + '<div class="option">' + questions[index].alternatives[1] + '</div>' + '<div class="option">' + questions[index].alternatives[2] + '</div>' + '<div class="option">' + questions[index].alternatives[3] + '</div>';
 
+    // assign content to div on html from js
     questionText.innerHTML = newQuestions;
     optionsText.innerHTML = newOptions;
 
-    // makes options clickable
+    // makes list-options clickable
     let selection = document.querySelectorAll(".option");
     for (i = 0; i < selection.length; i++) {
         selection[i].setAttribute("onclick", "selectionSeleceted(this)");
@@ -73,36 +74,40 @@ function showQuestions(index) {
 }
 
 
-/** this function will get,check an update the answer onclick */
+
 let queNumb = 0;
 
+/** this function will get user selection,check an update the answer onclick */
 function selectionSeleceted(answer) {
 
+    // access all items inside div options
     let allOptions = document.querySelector(".optionList").children;
-    console.log(allOptions);
-
     let userAnswer = answer.textContent;
     let correctAnswer = questions[queNumb].answer;
 
-
+    // check the condition if userAnswer is same with correctAnswer
     if (userAnswer === correctAnswer) {
         answer.classList.add("correct");
-
     } else {
         answer.classList.add("incorrect");
+
+        // iterrate over all options
+        for (i = 0; i < allOptions.length; i++) {
+            // shows which is the correctAnswer to the user
+            if (allOptions[i].textContent == correctAnswer) {
+                allOptions[i].classList.add("optionCorrect");
+            }
+        }
     };
-
+    // iterrate over all list-option items
     for (i = 0; i < allOptions.length; i++) {
+        // disable all options after selecting one
         allOptions[i].classList.add("disabled");
-
-
     }
-
 
 }
 
-// an array that will contain all questions and answers of game.
-
+// an array that will contain all questions and answers of game
 const questions = [{
         numb: 1,
         question: "What company is also the name of one of the longest rivers in the world?",

@@ -212,7 +212,7 @@ hr {
 
 }
 
-/* this class is created from js */
+/* this classes are created from js  and give style here*/
 .option {
     background-color: #e2e2c5;
     color: #060606;
@@ -236,4 +236,9 @@ hr {
 
 .disabled {
     pointer-events: none;
+}
+
+.optionCorrect {
+    background-color: #209663;
+    color: #FCFCFC;
 }
