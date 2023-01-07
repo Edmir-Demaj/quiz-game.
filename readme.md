@@ -1,4 +1,4 @@
-# **Quiz Game.**
+# **Quiz Game !**
 
 [View live project here.](https://edmir-demaj.github.io/quiz-game./)
 
@@ -6,58 +6,44 @@
 
 Check out how it looks in different screen sizes:
 
-![an image of the site in different screen sizes](assets/image/readme.md-images/responsive-site.png)
+![an image of the web app in different screen sizes](assets/images/responsiveDesign.png)
 
 # **Features**
 
-## **1. Header**
-- The header consists of the Logo, Home page, Gallery page and Contact page all with relevant links attached.
-- Header is identical in each page for easier navigation.
-- Links on Navbar inside the Header change color on hover for better UX.
-- The active page has an underline so it is more easy for user to know which page is.
-- Fully responsive.
+## **1. Start Game & How to play the Game buttons.**
+- -Start Game- button once is clicked opens the game.
+- -How to play the Game- button once is clicked opens game rules box.
+- Game rules box explain to user how to play the quiz game.
 
-![header of the page](assets/image/readme.md-images/header.png)
+![start game & how to play buttons with info box](assets/images/startGame.png)
 
-## **2. Hero-image section**
-- This section has a large background image where the user will get the first impaction about the site.
-- The main welcome message for better understanding what is about the site.
-- Call to action button which brings the user to Gallery page where can get a better experience navigating through different images from Albania.
-- Text overlay is used to make the user curios to explore more on the site.
+## **2. User Name details**
+- After Start Game button clicked a userName form shows.
+- This form ask user to provide name in order to continue further.
+- Name provided will be showed on quiz box.
 
-![hero-image-section with background image](assets/image/readme.md-images/hero-image-section.png)
+![userName form](assets/images/userNameDetails.png)
 
-## **3. Main content**
-- Consists of 3 sections where each one has some text to describe shortly more about the reasons why you should visit Albania.
-- On the first section is a video-image so the user can see more about this Country, source from [youtube.](https://www.youtube.com/watch?v=yg9k2uOdciM&t=5s)
-- The second and third sections have two different images to give more meaning what they are about and the text to explain more.
+## **3. Questions box**
+- This box contains userName, a questions counter, questions, options and next button.
+- Once an option is selected correct answer will highlight with green color and the wrong answer with red color.
+- After selection the other options wont be available to select.
+- Next button will show to move to next question.
 
-![main section of the site](assets/image/readme.md-images/main-section.png)
+![questions an answers box](assets/images/gameBox.png)
 
-## **4. Footer**
-- The footer section has links to connect with social media sites and a youtube link where the user can get more information about Albania.
-- The footer also has coyrights and Author of the site information.
-- Is the same footer in all the pages and all links open to a new tab for easier navigation.
+## **4. Results box**
+- At the end of the game user will be provided the final score.
+- User can see how many were correct and how many were incorrect.
+- Restart button will restart the game starting from score zero.
 
-![the footer of the site](assets/image/readme.md-images/footer.png)
-
-## **5. Gallery page**
-- The gallery page provides different images from different places in Albania and each one has a short description.
-- Through gallery page user can get more information about Albanian nature.
-- Fully responsive page.
-
-![gallery page image](assets/image/readme.md-images/gallery-page.png)
-
-## **6. Contact page**
-- Contact page consists of two parts:
-1. Contac Details, where the users can get details how to reach the organisation who provides information for travelling to Albania.
-2. Contact Form, where the users can submit their queries or suggestions they might have about visiting Albania.
-- All the fields need to fill out correctly to procced with submitting.
-
-![contact page image](assets/image/readme.md-images/contact-page.png)
+![final results box](assets/images/resultsBox.png)
 
 ## **Features left to implement**
-- I would like to make the site more dynamic with more animations to attract users attention and later to provide backend for my site.
+- In the future would like to add a timer for user to answer.
+- Add an option to choose difficulty of game, based on this to show different questions.
+- Increase number of questions.
+- Add option to choose the category of questions for example sport, history, art etc.
 
 # **Testing**
 
@@ -67,17 +53,19 @@ Check out how it looks in different screen sizes:
 
 - The CSS code is tested on [W3C Jigsaw Validator](https://jigsaw.w3.org/css-validator/validator) and no errors were found.
 
+- The JAVASCRIPT code is tested on [Jshint Validator](https://jshint.com/) and no errors were found.
+
 ## **LIghthouse Testing**
 
-The site is tested on Lighthouse devtools on Google Chrome to check the performance and accesibility and the results are abowe:
+The web app is tested on Lighthouse devtools on Google Chrome to check the performance and accesibility and the results are below:
 
-![lighhouse testing](assets/image/readme.md-images/lighthouse-performance-home-page.png)
+![lighhouse testing](assets/images/lighthouseTesting.png)
 
 ## **Browsers Testing**
 
-The site is checked in different browsers to see if works properly and if is maintained the design and features wanted.
+The web app is checked in different browsers to see if works properly and if is maintained the design and features wanted.
 
-Browsers used and their version:
+Browsers used and their versions:
 - Google Chrome version 105.05
 - Microsoft Edge version 105.0
 - Firefox version 105.0
@@ -87,33 +75,41 @@ Browsers used and their version:
 
 There are no unfixed bugs.
 
+## **Fixed bugs**
+
+- An error showed on W3C HTML Validator, an ID was used 2 times. To fix i removed from code one ID.
+- An error showed on W3C CSS Validator, unit wasn't set properly. Set proper unit (rem).
+- Jshint was showing  "let is available in es6 (use 'esversion: 6') or mozilla js extensions (use moz) " to fix it i inserted /*jshint esversion: 6 */ comment at the start of js file.
+
+![Jshint validator](assets/images/JShintJavascriptValidator.png)
+
 # **Technologies used**
 
 - HTML5
-- CSS3 
+- CSS3
+- JAVASCRIPT
 - GITPOD
 - GITHUB
 - FIGMA
 
 # **Deployment**
 - The site was deployed to GitHub pages. The steps to deploy are as follow:
- 1. In the GitHub repository welcome-to-albania, navigate to the Settings tab.
+ 1. In the GitHub repository quiz-game. navigate to the Settings tab.
  2. Under *General section scroll down and find Pages.
  3. On the branch section select branch to main and save.
  4. Once the main branch has been selected, the page will be automatically refreshed.
  5. After refreshing we will get the deployed link for the site.
- 6. To find our page also can go to GitHub repository welcome-to-albania, on section Environments click GitHub-pages and can find the deployment.
+ 6. To find our page also can go to GitHub repository quiz-game. on section Environments click GitHub-pages and can find the deployment.
 
  The link of the site can be found here:
- - https://edmir-demaj.github.io/welcome-to-albania/
+ - https://edmir-demaj.github.io/quiz-game./
 
  # **Credits**
 
 ## **Content**
 
-- The content on Home page was taken from different websites related with travelling to Albania. It was edited and recreated by the author of this site. (Edmir Demaj)
-- Instructions how to create hamburger menu for small devices was taken from [CSS Hamburger Menu design | NO JAVASCRIPT](https://www.youtube.com/watch?v=kNiic1CaXrQ&t=618s)
-- Inspiration about the design of the site was taken from [johnsmilga.com](https://html-css-flexbox-backroads-new-design.netlify.app/)
+- The content of the quiz was taken from Google.
+- An idea how a quiz is and works was taken from [Create a Quiz App using HTML CSS & JavaScript](https://www.youtube.com/watch?v=CqddbIrEM5I)
 - Instructions how to create a Readme.md file were taken from [Code-Institute-Solutions/readme-template](https://github.com/Code-Institute-Solutions/readme-template)
 
  ## **Other sources used for help**
@@ -127,19 +123,16 @@ There are no unfixed bugs.
 
  ## **Media**
 
-- All the images used for the site were taken from [Unspalsh.](https://unsplash.com/)
-- The video-image on Home page was taken from [Youtube](https://www.youtube.com/watch?v=yg9k2uOdciM)
-- The logo was made with [Canva.com](https://www.canva.com/design/DAFNWUi8Ar0/ukgdC9kMg6_DThWJ5jdBUA/edit)
-- All icons used were taken from [Font Awsome](https://fontawesome.com/)
+- Favicon was taken from [Favicon.com](https://favicon.io/)
+- Icons used were taken from [Font Awsome](https://fontawesome.com/)
 
 # **Wireframe**
 
-Wireframe for this site was made using [Figma](https://www.figma.com/) and was created only for Home page for 3 different screen sizes: 
-Desktop, Tablet, Mobile.
+Wireframe for this web app was made using [Figma](https://www.figma.com/)
 
 See the wireframe for this site.
 
-![wireframe for home page](assets/image/readme.md-images/desktop-version.jpg)
+![wireframe for game](assets/images/project2Wireframe.png)
 
  ## **Thank you !**
 
