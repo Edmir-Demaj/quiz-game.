@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     // hide socre results info box on load
-    // document.getElementById("results").style.display = "none";
+    document.getElementById("results").style.display = "none";
 
 });
 

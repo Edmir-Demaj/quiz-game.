@@ -1,5 +1,5 @@
 /* importing google fonts */
-@import url('https://fonts.googleapis.com/css2?family=Henny+Penny&family=Jomolhari&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Henny+Penny&family=Press+Start+2P&display=swap');
 
 /* global style */
 * {
@@ -11,54 +11,53 @@
 
 /* body & heading 1 style */
 body {
-    background-color: #FCFCFC;
-    font-family: 'Jomolhari', serif;
-    font-weight: bold;
-    font-size: 1rem;
+    background-color: #f5bf40;
+    font-family: 'Roboto Mono', monospace;
     height: 100vh;
+    font-size: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 15px;
 }
 
 h1 {
     font-family: 'Henny Penny', cursive;
-    color: #0356db;
-    font-size: 2.5rem;
+    color: #0b216c;
+    font-size: 2.8rem;
     text-align: center;
-    letter-spacing: 2px;
-    margin-bottom: 50px;
+    margin-top: 30px;
 }
 
 /* start button and info box style */
 button {
-    background-color: #0763f4;
-    color: #FCFCFC;
-    font-size: 1.3rem;
+    background-color: #043aeb;
+    color: #ffffff;
+    font-size: 1.2rem;
     font-weight: bold;
-    width: 180px;
+    text-transform: uppercase;
     padding: 10px 30px;
-    border-radius: 20px;
-    border: 2px solid #46237A;
+    border-radius: 50px;
     margin-bottom: 40px;
+    cursor: pointer;
 }
 
 #info {
-    font-size: 1rem;
-    width: 240px;
+    font-size: 1.1rem;
+    text-transform: capitalize;
     background-color: #46237A;
+    color: #ffffff;
+    margin-bottom: 30px;
+    cursor: pointer;
 }
 
 #info:hover {
-    background-color: #0356db;
+    background-color: #043aeb;
 }
 
-button:focus,
 button:hover {
     background-color: #46237A;
-    color: #FCFCFC;
 }
 
 main {
@@ -71,77 +70,84 @@ main {
 /* footer style */
 footer p {
     text-align: center;
-    color: #0356db;
+    color: #0b216c;
+    font-weight: bold;
 }
 
-/* game rules style */
+/* game rules info box style */
 
 #rules {
     background-color: #46237A;
     color: #FCFCFC;
-    padding: 20px 30px;
-    border-spacing: 2px solid green;
+    padding: 20px;
     margin-bottom: 30px;
-    max-width: 500px;
-    font-size: 1rem;
-    border-radius: 20px;
-    box-shadow: 0px 0px 10px 5px rgba(135, 131, 143, 0.736);
+    font-size: 1.2rem;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 5px rgba(37, 36, 40, 0.7);
+}
+
+ol {
+    margin: 30px 0 20px 40px;
 }
 
 #enjoy {
-    font-size: 1.2rem;
+    font-size: 1.7rem;
     font-weight: bold;
-    color: #209663;
+    color: #8fd005;
+    margin: 50px 0;
+    text-align: center;
 }
 
-#closeInfo {
-    font-size: 1.2rem;
-    background-color: #0356db;
-    display: inline-block;
-    width: 150px;
+.focus {
     text-align: center;
-    border-radius: 10px;
+}
+
+#closeInfo:hover {
+    background-color: #8fd005;
+    color: #0b216c;
 }
 
 /* username details form style */
 form {
-    background-color: #209663;
+    background-color: #8fd005;
     padding: 40px;
     text-align: center;
-    border-radius: 30px;
-    border: 10px solid #46237A;
+    border-radius: 10px;
+    border: 3px solid #0b216c;
     position: absolute;
     transform: translate(-50%, -95%);
 }
 
 label {
-    color: #FCFCFC;
-    font-size: 1.2rem;
+    color: #0b216c;
+    font-size: 1.3rem;
+    font-weight: bold;
 }
 
 #userDetails {
     height: 30px;
-    max-width: 160px;
     border-style: none;
-    border-radius: 10px;
-    background-color: #d9d3d3;
+    border-radius: 5px;
+    background-color: #e7e7ef;
+    border: 1px solid #0b216c;
 }
 
 input[type="text"] {
     font-size: 1rem;
+    font-weight: bold;
     padding-left: 10px;
+    margin: 20px 0;
 }
 
 input[type="submit"] {
-    background-color: #0763f4;
-    color: #FCFCFC;
+    background-color: #043aeb;
+    color: #ffffff;
     font-size: 1rem;
     font-weight: bold;
-    width: 140px;
-    padding: 5px 25px;
-    border-radius: 20px;
-    border: 2px solid #46237A;
-    margin-top: 20px;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    border-radius: 50px;
+    cursor: pointer;
 }
 
 /* game area with questions & answer style */
