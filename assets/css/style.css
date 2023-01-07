@@ -320,6 +320,8 @@ hr {
 
     #next {
         margin-top: 20px;
+        font-size: 1.3rem;
+        padding: 10px 30px;
     }
 
     footer {

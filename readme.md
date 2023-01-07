@@ -2,7 +2,7 @@
 
 [View live project here.](https://edmir-demaj.github.io/quiz-game./)
 
-**Quiz Game** is a web application created for users to test their knowledges with a variety of questions and of course have funn while they play it. As a game target anyone who likes mind games with different age groups. This quiz-game contains a level of difficulty easy-medium with questions from different fields. 
+**Quiz Game** is a web application created for users to test their knowledges with a variety of questions and of course have funn while they play it. As a game target anyone who likes mind games, different age groups. This quiz-game contains a level of difficulty easy to medium with questions from different fields. A design with variety and strong colors so user can have a great experience playing the game and enjoying colors aswell.
 
 Check out how it looks in different screen sizes:
 
@@ -27,7 +27,7 @@ Check out how it looks in different screen sizes:
 ## **3. Questions box**
 - This box contains userName, a questions counter, questions, options and next button.
 - Once an option is selected correct answer will highlight with green color and the wrong answer with red color.
-- After selection the other options wont be available to select.
+- After selection the other options won't be available to select.
 - Next button will show to move to next question.
 
 ![questions an answers box](assets/images/gameBox.png)
@@ -35,6 +35,7 @@ Check out how it looks in different screen sizes:
 ## **4. Results box**
 - At the end of the game user will be provided the final score.
 - User can see how many were correct and how many were incorrect.
+- A message will be displayed based on the final score.
 - Restart button will restart the game starting from score zero.
 
 ![final results box](assets/images/resultsBox.png)
@@ -81,7 +82,7 @@ There are no unfixed bugs.
 - An error showed on W3C CSS Validator, unit wasn't set properly. Set proper unit (rem).
 - Jshint was showing  "let is available in es6 (use 'esversion: 6') or mozilla js extensions (use moz) " to fix it i inserted /*jshint esversion: 6 */ comment at the start of js file.
 
-![Jshint validator](assets/images/JShintJavascriptValidator.png)
+![Jshint validator](assets/images/JShintValidator.png)
 
 # **Technologies used**
 
@@ -109,7 +110,7 @@ There are no unfixed bugs.
 ## **Content**
 
 - The content of the quiz was taken from Google.
-- An idea how a quiz is and works was taken from [Create a Quiz App using HTML CSS & JavaScript](https://www.youtube.com/watch?v=CqddbIrEM5I)
+- An idea how a quiz game is and works was taken from [Create a Quiz App using HTML CSS & JavaScript](https://www.youtube.com/watch?v=CqddbIrEM5I)
 - Instructions how to create a Readme.md file were taken from [Code-Institute-Solutions/readme-template](https://github.com/Code-Institute-Solutions/readme-template)
 
  ## **Other sources used for help**
@@ -133,7 +134,7 @@ Wireframe for this web app was made using [Figma](https://www.figma.com/)
 See the wireframe for this site.
 
 ![wireframe for game](assets/images/project2Wireframe.png)
-
- ## **Thank you !**
+ #
+ # **Thank you !**
 
 

@@ -154,6 +154,14 @@ function next() {
 function results() {
     document.getElementById("results").style.display = "block";
     document.getElementById("questionsBox").style.display = "none";
+
+    let message = document.getElementById("congrats");
+    // shows greeting message based on final score
+    if (correctSc >= wrongSc) {
+        message.textContent = "Congratulations!"
+    } else {
+        message.textContent = "Sorry, better next time!"
+    }
 }
 
 /** this function reload current window on click of restart button */
