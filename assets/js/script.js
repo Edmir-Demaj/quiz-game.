@@ -68,17 +68,19 @@ function showQuestions(index) {
     // makes list-options clickable
     let selection = document.querySelectorAll(".option");
     for (i = 0; i < selection.length; i++) {
-        selection[i].setAttribute("onclick", "selectionSeleceted(this)");
+        selection[i].setAttribute("onclick", "seleceted(this)");
     }
 
 }
 
 
-
+let showQue = 0;
 let queNumb = 0;
 
+
+
 /** this function will get user selection,check an update the answer onclick */
-function selectionSeleceted(answer) {
+function seleceted(answer) {
 
     // access all items inside div options
     let allOptions = document.querySelector(".optionList").children;
@@ -88,24 +90,48 @@ function selectionSeleceted(answer) {
     // check the condition if userAnswer is same with correctAnswer
     if (userAnswer === correctAnswer) {
         answer.classList.add("correct");
+
     } else {
         answer.classList.add("incorrect");
 
-        // iterrate over all options
         for (i = 0; i < allOptions.length; i++) {
-            // shows which is the correctAnswer to the user
-            if (allOptions[i].textContent == correctAnswer) {
+            if (allOptions[i].textContent === correctAnswer) {
                 allOptions[i].classList.add("optionCorrect");
             }
         }
     };
-    // iterrate over all list-option items
-    for (i = 0; i < allOptions.length; i++) {
-        // disable all options after selecting one
-        allOptions[i].classList.add("disabled");
-    }
+
+
+    // if (showQue < questions.length - 1) {
+
+    //     showQue++;
+    //     queNumb++;
+    //     console.log(queNumb);
+
+    //     showQuestions(showQue);
+
+    //     let counter = document.getElementById("counter");
+    //     counter.textContent = queNumb + 1;
+    // }
+
+    // // iterrate over all options
+    // for (i = 0; i < allOptions.length; i++) {
+    //     // shows which is the correctAnswer to the user
+    //     if (allOptions[i].textContent == correctAnswer) {
+    //         allOptions[i].classList.add("optionCorrect");
+    //     }
+    // }
+
+    // // iterrate over all list-option items
+    // for (i = 0; i < allOptions.length; i++) {
+    //     // disable all options after selecting one
+    //     allOptions[i].classList.add("disabled");
+    // }
 
 }
+
+
+
 
 // an array that will contain all questions and answers of game
 const questions = [{
