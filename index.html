@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="This is a web application game for users to test their knowledges with a quiz game and of course to have funn when they play it.">
+        content="This game is for users to test their knowledges with a quiz game and of course to have funn while they play it.">
     <meta name="keywords" content="web, game, quiz, app, test, knowledges, play, funn, score">
     <!-- css stylesheet link -->
     <link rel="stylesheet" href="assets/css/style.css">
@@ -22,31 +22,29 @@
 
     <!-- main content where game is showed & played -->
     <main>
+
         <button id="start">Start Game</button>
         <button id="info">How to play the game?</button>
 
-        <!-- game rules -->
-        <section>
-            <ol id="rules">
-                <li>First press Start Game button to continue.</li>
-                <li>Enter your name on the new tab.</li>
-                <li>Read the question and select your answer.</li>
-                <li>You will have 10 seconds for each question.</li>
-                <li>After submiting your answer you can not reselect.</li>
-                <li>Press Next button for next question.</li>
-                <li>At the end of game you will get the results.</li>
-                <br>
-                <p id="enjoy">Enjoy Quiz-game !</p>
-                <br>
-                <p id="closeInfo">Understand !</p>
+        <!-- game rules info section -->
+        <section id="rules">
+            <ol>
+                <li>First click Start Game button to continue.</li>
+                <li>Enter your name.</li>
+                <li>Read the question and choose your answer.</li>
+                <li>After selecting your answer you can not reselect.</li>
+                <li>Click Next button for the next question.</li>
+                <li>At the end of game you will get the final score.</li>
             </ol>
+            <p id="enjoy">Enjoy Quiz Game !</p>
+            <button id="closeInfo">Understand !</button>
         </section>
 
         <!-- username details form -->
         <section>
-            <form action="#" method="post" id="user">
+            <form action="https://www.sendmydatahere.com" method="post" id="user">
                 <label for="userDetails">Please enter your Name:</label>
-                <input type="text" id="userDetails" name="userDetails" autofocus autocomplete="on" required>
+                <input type="text" id="userDetails" name="userDetails" autocomplete="on" required>
                 <br>
                 <input type="submit">
             </form>
@@ -55,20 +53,24 @@
         <!-- game area box -->
         <section>
             <div id="questionsBox">
-                <div id="timer">
-                    <p id="name">Your Name</p>
-                    <p> Question <span id="counter"> 1</span>/10
+                <div id="gameInfo">
+                    <p id="name">
+                        <!--userName from javascript-->
+                    </p>
+                    <p> Question: <span id="counter">1</span> / 10
                     </p>
                 </div>
                 <hr>
                 <div id="questions">
-                    <p id="questionText"></p>
-                    <div id="options" class="optionList">
-
+                    <p id="questionText">
+                        <!--here will put questions from js-->
+                    </p>
+                    <div id="optionsText" class="optionList">
+                        <!--here will put options from js-->
                     </div>
                 </div>
                 <hr>
-                <div class="actions">
+                <div class="action">
                     <button id="next">Next</button>
                 </div>
             </div>
@@ -77,18 +79,13 @@
         <!-- results info box -->
         <section>
             <div id="results">
-                <span id="icon">icon</span>
+                <span id="icon"><i class="fa-solid fa-trophy"></i></span>
                 <p id="congrats">Congratulations !</p>
                 <p id="scoreTitle">Your score is:</p>
                 <p id="correctAnsw">Correct Answers: <span id="correctScore">0</span></p>
                 <p id="wrongAnsw">Wrong Answers: <span id="wrongScore">0</span></p>
             </div>
         </section>
-
-
-
-
-
 
     </main>
 
@@ -100,6 +97,8 @@
 
     <!-- javascript link -->
     <script src="assets/js/script.js"></script>
+    <!-- font awsome script -->
+    <script src="https://kit.fontawesome.com/b2a34f6332.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

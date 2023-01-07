@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     // hide socre results info box on load
-    document.getElementById("results").style.display = "none";
+    // document.getElementById("results").style.display = "none";
 
 });
 
@@ -65,7 +65,7 @@ function startGame(event) {
 /** this function get questions and answers from the array questions */
 function showQuestions(index) {
     const questionText = document.getElementById("questionText");
-    const optionsText = document.getElementById("options");
+    const optionsText = document.getElementById("optionsText");
 
 
     let newQuestions = questions[index].numb + "." + " " + questions[index].question;
@@ -102,14 +102,14 @@ function seleceted(answer) {
     if (userAnswer === correctAnswer) {
         answer.classList.add("correct");
         correctSc++;
-        console.log(correctSc);
+
         let newCorrectScore = document.getElementById("correctScore");
         newCorrectScore.textContent = correctSc;
 
     } else {
         answer.classList.add("incorrect");
         wrongSc++;
-        console.log(wrongSc);
+
         let newWrongScore = document.getElementById("wrongScore");
         newWrongScore.textContent = wrongSc;
 

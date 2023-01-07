@@ -76,7 +76,7 @@ footer p {
 
 /* game rules style */
 
-ol {
+#rules {
     background-color: #46237A;
     color: #FCFCFC;
     padding: 20px 30px;
@@ -159,7 +159,7 @@ input[type="submit"] {
     box-shadow: 0px 0px 10px 5px #73698fdb;
 }
 
-#timer {
+#gameInfo {
     display: flex;
     justify-content: space-around;
     padding: 10px 0;
@@ -205,7 +205,7 @@ hr {
 
 
 
-.actions {
+.action {
     display: flex;
     justify-content: space-around;
     align-items: center;
