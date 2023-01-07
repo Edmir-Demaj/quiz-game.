@@ -19,6 +19,11 @@ document.addEventListener("DOMContentLoaded", function () {
     let openGame = document.getElementById("user");
     openGame.addEventListener("submit", startGame);
 
+    // hide next button and shows only after making a selection
+    let nextQuestion = document.getElementById("next");
+    nextQuestion.style.display = "none";
+    nextQuestion.addEventListener("click", next);
+
 });
 
 
@@ -91,9 +96,10 @@ function seleceted(answer) {
     if (userAnswer === correctAnswer) {
         answer.classList.add("correct");
 
+
     } else {
         answer.classList.add("incorrect");
-
+        // iterrate over all options
         for (i = 0; i < allOptions.length; i++) {
             if (allOptions[i].textContent === correctAnswer) {
                 allOptions[i].classList.add("optionCorrect");
@@ -102,33 +108,37 @@ function seleceted(answer) {
     };
 
 
-    // if (showQue < questions.length - 1) {
+    // iterrate over all list-option items
+    for (i = 0; i < allOptions.length; i++) {
+        // disable all options after selecting one
+        allOptions[i].classList.add("disabled");
+    }
 
-    //     showQue++;
-    //     queNumb++;
-    //     console.log(queNumb);
+    let next = document.getElementById("next");
+    next.style.display = "block";
 
-    //     showQuestions(showQue);
-
-    //     let counter = document.getElementById("counter");
-    //     counter.textContent = queNumb + 1;
-    // }
-
-    // // iterrate over all options
-    // for (i = 0; i < allOptions.length; i++) {
-    //     // shows which is the correctAnswer to the user
-    //     if (allOptions[i].textContent == correctAnswer) {
-    //         allOptions[i].classList.add("optionCorrect");
-    //     }
-    // }
-
-    // // iterrate over all list-option items
-    // for (i = 0; i < allOptions.length; i++) {
-    //     // disable all options after selecting one
-    //     allOptions[i].classList.add("disabled");
-    // }
 
 }
+
+
+
+function next() {
+
+    if (showQue < questions.length - 1) {
+
+        showQue++;
+        queNumb++;
+
+        showQuestions(showQue);
+
+        let counter = document.getElementById("counter");
+        counter.textContent = queNumb + 1;
+
+        document.getElementById("next").style.display = "none";
+    };
+
+}
+
 
 
 
