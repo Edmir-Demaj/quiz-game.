@@ -242,3 +242,21 @@ hr {
     background-color: #209663;
     color: #FCFCFC;
 }
+
+/* results info box style */
+#results {
+    background-color: #0356db;
+    color: #e2e2c5;
+    position: absolute;
+    transform: translate(-50%, -85%);
+    width: 90%;
+    max-width: 450px;
+    height: 300px;
+    font-size: 1.2rem;
+    text-align: center;
+    border-radius: 20px;
+}
+
+#congrats {
+    margin: 10px 0 60px;
+}

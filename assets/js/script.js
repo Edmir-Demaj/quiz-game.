@@ -24,6 +24,10 @@ document.addEventListener("DOMContentLoaded", function () {
     nextQuestion.style.display = "none";
     nextQuestion.addEventListener("click", next);
 
+
+    // hide socre results info box on load
+    document.getElementById("results").style.display = "none";
+
 });
 
 
@@ -51,6 +55,7 @@ function startGame(event) {
     document.getElementById("name").textContent = document.getElementById("userDetails").value;
     // shows questions box
     document.getElementById("questionsBox").style.display = "block";
+    document.getElementById("user").style.display = "none";
 
     // call function showQuestions to show question number
     showQuestions(0);
@@ -81,7 +86,8 @@ function showQuestions(index) {
 
 let showQue = 0;
 let queNumb = 0;
-
+let correctSc = 0;
+let wrongSc = 0;
 
 
 /** this function will get user selection,check an update the answer onclick */
@@ -95,10 +101,19 @@ function seleceted(answer) {
     // check the condition if userAnswer is same with correctAnswer
     if (userAnswer === correctAnswer) {
         answer.classList.add("correct");
-
+        correctSc++;
+        console.log(correctSc);
+        let newCorrectScore = document.getElementById("correctScore");
+        newCorrectScore.textContent = correctSc;
 
     } else {
         answer.classList.add("incorrect");
+        wrongSc++;
+        console.log(wrongSc);
+        let newWrongScore = document.getElementById("wrongScore");
+        newWrongScore.textContent = wrongSc;
+
+
         // iterrate over all options
         for (i = 0; i < allOptions.length; i++) {
             if (allOptions[i].textContent === correctAnswer) {
@@ -106,7 +121,6 @@ function seleceted(answer) {
             }
         }
     };
-
 
     // iterrate over all list-option items
     for (i = 0; i < allOptions.length; i++) {
@@ -116,12 +130,9 @@ function seleceted(answer) {
 
     let next = document.getElementById("next");
     next.style.display = "block";
-
-
 }
 
-
-
+// change next question and incresae counting number
 function next() {
 
     if (showQue < questions.length - 1) {
@@ -135,9 +146,18 @@ function next() {
         counter.textContent = queNumb + 1;
 
         document.getElementById("next").style.display = "none";
+    } else {
+        results();
     };
-
 }
+
+// shows results box after question is 10
+function results() {
+    document.getElementById("results").style.display = "block";
+    document.getElementById("questionsBox").style.display = "none";
+}
+
+
 
 
 
