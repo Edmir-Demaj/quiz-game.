@@ -181,7 +181,7 @@ input[type="submit"]:hover {
     letter-spacing: 1px;
 }
 
-#line {
+hr {
     height: 1px;
     width: 90%;
     margin-left: 5%;
@@ -200,7 +200,7 @@ input[type="submit"]:hover {
 }
 
 #next {
-    font-size: 1.rem;
+    font-size: 1rem;
     padding: 5px 20px;
     margin-top: 12px;
 }
@@ -236,8 +236,8 @@ input[type="submit"]:hover {
 }
 
 .option:hover {
-    background-color: #efe97b;
-    color: #0b216c;
+    border: 3px solid rgb(247, 247, 14);
+    color: #3dc1fa;
 }
 
 .correct {

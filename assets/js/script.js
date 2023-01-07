@@ -1,3 +1,6 @@
+/*jshint esversion: 6 */
+// the above comment tell to JSHint validator that i am using ES2015 syntax
+
 // wait for DOM to finish loading before starting game.
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -134,8 +137,8 @@ function next() {
 
     if (showQue < questions.length - 1) {
         // increase question and counter numbers
-        showQue++;
-        queNumb++;
+        showQue++
+        queNumb++
         showQuestions(showQue);
 
         let counter = document.getElementById("counter");
@@ -219,5 +222,5 @@ const questions = [{
         answer: "8",
         alternatives: ["12", "8", "9", "6"]
     },
-]
+];
 // end of javascript code
