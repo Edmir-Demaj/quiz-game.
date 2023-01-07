@@ -24,9 +24,12 @@ document.addEventListener("DOMContentLoaded", function () {
     nextQuestion.style.display = "none";
     nextQuestion.addEventListener("click", next);
 
-
     // hide socre results info box on load
     document.getElementById("results").style.display = "none";
+
+    // restart the game on click restart button
+    let restart = document.getElementById("restart");
+    restart.addEventListener("click", reload);
 
 });
 
@@ -157,7 +160,10 @@ function results() {
     document.getElementById("questionsBox").style.display = "none";
 }
 
-
+/** this function reload current window on click of button */
+function reload() {
+    window.location.reload();
+}
 
 
 
