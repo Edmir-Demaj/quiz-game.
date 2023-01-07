@@ -1,108 +1,146 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# **Quiz Game.**
 
-Welcome Edmir-Demaj,
+[View live project here.](https://edmir-demaj.github.io/quiz-game./)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+**Quiz Game** is a web application created for users to test their knowledges with a variety of questions and of course have funn while they play it. As a game target anyone who likes mind games with different age groups. This quiz-game contains a level of difficulty easy-medium with questions from different fields. 
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+Check out how it looks in different screen sizes:
 
-## Gitpod Reminders
+![an image of the site in different screen sizes](assets/image/readme.md-images/responsive-site.png)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+# **Features**
 
-`python3 -m http.server`
+## **1. Header**
+- The header consists of the Logo, Home page, Gallery page and Contact page all with relevant links attached.
+- Header is identical in each page for easier navigation.
+- Links on Navbar inside the Header change color on hover for better UX.
+- The active page has an underline so it is more easy for user to know which page is.
+- Fully responsive.
 
-A blue button should appear to click: _Make Public_,
+![header of the page](assets/image/readme.md-images/header.png)
 
-Another blue button should appear to click: _Open Browser_.
+## **2. Hero-image section**
+- This section has a large background image where the user will get the first impaction about the site.
+- The main welcome message for better understanding what is about the site.
+- Call to action button which brings the user to Gallery page where can get a better experience navigating through different images from Albania.
+- Text overlay is used to make the user curios to explore more on the site.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+![hero-image-section with background image](assets/image/readme.md-images/hero-image-section.png)
 
-A blue button should appear to click: _Make Public_,
+## **3. Main content**
+- Consists of 3 sections where each one has some text to describe shortly more about the reasons why you should visit Albania.
+- On the first section is a video-image so the user can see more about this Country, source from [youtube.](https://www.youtube.com/watch?v=yg9k2uOdciM&t=5s)
+- The second and third sections have two different images to give more meaning what they are about and the text to explain more.
 
-Another blue button should appear to click: _Open Browser_.
+![main section of the site](assets/image/readme.md-images/main-section.png)
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+## **4. Footer**
+- The footer section has links to connect with social media sites and a youtube link where the user can get more information about Albania.
+- The footer also has coyrights and Author of the site information.
+- Is the same footer in all the pages and all links open to a new tab for easier navigation.
 
-To log into the Heroku toolbelt CLI:
+![the footer of the site](assets/image/readme.md-images/footer.png)
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+## **5. Gallery page**
+- The gallery page provides different images from different places in Albania and each one has a short description.
+- Through gallery page user can get more information about Albanian nature.
+- Fully responsive page.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+![gallery page image](assets/image/readme.md-images/gallery-page.png)
 
-------
+## **6. Contact page**
+- Contact page consists of two parts:
+1. Contac Details, where the users can get details how to reach the organisation who provides information for travelling to Albania.
+2. Contact Form, where the users can submit their queries or suggestions they might have about visiting Albania.
+- All the fields need to fill out correctly to procced with submitting.
 
-## Release History
+![contact page image](assets/image/readme.md-images/contact-page.png)
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+## **Features left to implement**
+- I would like to make the site more dynamic with more animations to attract users attention and later to provide backend for my site.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+# **Testing**
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+## **Validator Testing**
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+- The HTML code is tested on [W3C HTML Validator](https://validator.w3.org/nu/#textarea) and no errors were found.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+- The CSS code is tested on [W3C Jigsaw Validator](https://jigsaw.w3.org/css-validator/validator) and no errors were found.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+## **LIghthouse Testing**
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+The site is tested on Lighthouse devtools on Google Chrome to check the performance and accesibility and the results are abowe:
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+![lighhouse testing](assets/image/readme.md-images/lighthouse-performance-home-page.png)
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+## **Browsers Testing**
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+The site is checked in different browsers to see if works properly and if is maintained the design and features wanted.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+Browsers used and their version:
+- Google Chrome version 105.05
+- Microsoft Edge version 105.0
+- Firefox version 105.0
+- Opera version 90.0
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+## **Unfixed bugs**
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+There are no unfixed bugs.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+# **Technologies used**
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+- HTML5
+- CSS3 
+- GITPOD
+- GITHUB
+- FIGMA
 
-------
+# **Deployment**
+- The site was deployed to GitHub pages. The steps to deploy are as follow:
+ 1. In the GitHub repository welcome-to-albania, navigate to the Settings tab.
+ 2. Under *General section scroll down and find Pages.
+ 3. On the branch section select branch to main and save.
+ 4. Once the main branch has been selected, the page will be automatically refreshed.
+ 5. After refreshing we will get the deployed link for the site.
+ 6. To find our page also can go to GitHub repository welcome-to-albania, on section Environments click GitHub-pages and can find the deployment.
 
-## FAQ about the uptime script
+ The link of the site can be found here:
+ - https://edmir-demaj.github.io/welcome-to-albania/
 
-**Why have you added this script?**
+ # **Credits**
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+## **Content**
 
-**How will this affect me?**
+- The content on Home page was taken from different websites related with travelling to Albania. It was edited and recreated by the author of this site. (Edmir Demaj)
+- Instructions how to create hamburger menu for small devices was taken from [CSS Hamburger Menu design | NO JAVASCRIPT](https://www.youtube.com/watch?v=kNiic1CaXrQ&t=618s)
+- Inspiration about the design of the site was taken from [johnsmilga.com](https://html-css-flexbox-backroads-new-design.netlify.app/)
+- Instructions how to create a Readme.md file were taken from [Code-Institute-Solutions/readme-template](https://github.com/Code-Institute-Solutions/readme-template)
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+ ## **Other sources used for help**
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+ - [CodeInstitute](https://learn.codeinstitute.net/ci_program/diplomainfullstacksoftwarecommoncurriculum)
+ - [W3schools](https://www.w3schools.com/html/default.asp)
+ - [MDN web docs](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics)
+ - [Stackoverflow](https://stackoverflow.com/)
+ - [Youtube](https://www.youtube.com/results?search_query=flexbox+and+grid)
+ - [Google](https://www.google.co.uk/)
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+ ## **Media**
 
-**So….?**
+- All the images used for the site were taken from [Unspalsh.](https://unsplash.com/)
+- The video-image on Home page was taken from [Youtube](https://www.youtube.com/watch?v=yg9k2uOdciM)
+- The logo was made with [Canva.com](https://www.canva.com/design/DAFNWUi8Ar0/ukgdC9kMg6_DThWJ5jdBUA/edit)
+- All icons used were taken from [Font Awsome](https://fontawesome.com/)
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+# **Wireframe**
 
-**Can I opt out?**
+Wireframe for this site was made using [Figma](https://www.figma.com/) and was created only for Home page for 3 different screen sizes: 
+Desktop, Tablet, Mobile.
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+See the wireframe for this site.
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+![wireframe for home page](assets/image/readme.md-images/desktop-version.jpg)
 
-**Anything more?**
+ ## **Thank you !**
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
 
----
-
-Happy coding!

@@ -236,8 +236,8 @@ hr {
 }
 
 .option:hover {
-    border: 3px solid rgb(247, 247, 14);
-    color: #3dc1fa;
+    outline: 4px solid #efe97b;
+    color: #4164d6;
 }
 
 .correct {
@@ -316,6 +316,10 @@ hr {
 @media screen and (min-width: 730px) {
     h1 {
         font-size: 3.5rem;
+    }
+
+    #next {
+        margin-top: 20px;
     }
 
     footer {
