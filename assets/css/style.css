@@ -75,7 +75,6 @@ footer p {
 }
 
 /* game rules info box style */
-
 #rules {
     background-color: #46237A;
     color: #FCFCFC;
@@ -155,7 +154,6 @@ input[type="submit"]:hover {
 }
 
 /* game area with questions & answer style */
-
 #questionsBox {
     background-color: #46237A;
     color: white;
@@ -314,9 +312,7 @@ input[type="submit"]:hover {
     margin-top: 20px;
 }
 
-
 /* media querie for responsive design */
-
 @media screen and (min-width: 730px) {
     h1 {
         font-size: 3.5rem;

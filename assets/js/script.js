@@ -1,4 +1,4 @@
-// wait for the DOM to finish loading before starting the game.
+// wait for DOM to finish loading before starting game.
 document.addEventListener("DOMContentLoaded", function () {
 
     // hidde game rules box on DOM load.
@@ -30,7 +30,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // restart the game on click restart button
     let restart = document.getElementById("restart");
     restart.addEventListener("click", reload);
-
 });
 
 
@@ -52,7 +51,6 @@ function getName() {
 
 /** this function shows game box */
 function startGame(event) {
-
     event.preventDefault();
     // get users name and assing to game
     document.getElementById("name").textContent = document.getElementById("userDetails").value;
@@ -60,9 +58,8 @@ function startGame(event) {
     document.getElementById("questionsBox").style.display = "block";
     document.getElementById("user").style.display = "none";
 
-    // call function showQuestions to show question number
+    // call function showQuestions to show question number 0
     showQuestions(0);
-
 }
 
 /** this function get questions and answers from the array questions */
@@ -70,7 +67,7 @@ function showQuestions(index) {
     const questionText = document.getElementById("questionText");
     const optionsText = document.getElementById("optionsText");
 
-
+    // add dynamic content to html elements
     let newQuestions = questions[index].numb + "." + " " + questions[index].question;
     let newOptions = '<div class="option">' + questions[index].alternatives[0] + '</div>' + '<div class="option">' + questions[index].alternatives[1] + '</div>' + '<div class="option">' + questions[index].alternatives[2] + '</div>' + '<div class="option">' + questions[index].alternatives[3] + '</div>';
 
@@ -83,22 +80,21 @@ function showQuestions(index) {
     for (i = 0; i < selection.length; i++) {
         selection[i].setAttribute("onclick", "seleceted(this)");
     }
-
 }
-
 
 let showQue = 0;
 let queNumb = 0;
 let correctSc = 0;
 let wrongSc = 0;
 
-
 /** this function will get user selection,check an update the answer onclick */
 function seleceted(answer) {
 
     // access all items inside div options
     let allOptions = document.querySelector(".optionList").children;
+    // get user answer
     let userAnswer = answer.textContent;
+    // get correct answer
     let correctAnswer = questions[queNumb].answer;
 
     // check the condition if userAnswer is same with correctAnswer
@@ -108,14 +104,12 @@ function seleceted(answer) {
 
         let newCorrectScore = document.getElementById("correctScore");
         newCorrectScore.textContent = correctSc;
-
     } else {
         answer.classList.add("incorrect");
         wrongSc++;
 
         let newWrongScore = document.getElementById("wrongScore");
         newWrongScore.textContent = wrongSc;
-
 
         // iterrate over all options
         for (i = 0; i < allOptions.length; i++) {
@@ -130,7 +124,7 @@ function seleceted(answer) {
         // disable all options after selecting one
         allOptions[i].classList.add("disabled");
     }
-
+    // shows next button to proceed game
     let next = document.getElementById("next");
     next.style.display = "block";
 }
@@ -139,17 +133,16 @@ function seleceted(answer) {
 function next() {
 
     if (showQue < questions.length - 1) {
-
+        // increase question and counter numbers
         showQue++;
         queNumb++;
-
         showQuestions(showQue);
 
         let counter = document.getElementById("counter");
         counter.textContent = queNumb + 1;
-
         document.getElementById("next").style.display = "none";
     } else {
+        // shows results tab at the end of game
         results();
     };
 }
@@ -160,14 +153,10 @@ function results() {
     document.getElementById("questionsBox").style.display = "none";
 }
 
-/** this function reload current window on click of button */
+/** this function reload current window on click of restart button */
 function reload() {
     window.location.reload();
 }
-
-
-
-
 
 // an array that will contain all questions and answers of game
 const questions = [{
@@ -231,3 +220,4 @@ const questions = [{
         alternatives: ["12", "8", "9", "6"]
     },
 ]
+// end of javascript code
